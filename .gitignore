@@ -1,0 +1,31 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+*.coverprofile
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# IDE
+.vscode
+.idea
+.DS_Store
+
+# Generated manifest files
+hack/local-dev/manifests/common/*.yaml
+hack/local-dev/manifests/singlenode/*.yaml
+hack/local-dev/manifests/multinode/*.yaml
+hack/local-dev/secrets/*.csr
+hack/local-dev/secrets/*.pem
+hack/local-dev/secrets/requests/*.json
+hack/local-dev/config/etcd.conf.yaml
+hack/local-dev/config/kind.config.yaml
+
+# Go workspace file
+go.work
