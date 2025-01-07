@@ -1,0 +1,14 @@
+name: Generate dependency graph for #1
+on:
+  workflow_dispatch: {}
+jobs:
+  update-diagram:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maxim-lobanov/build-issue-dependencies-graph@v1
+        with:
+          root-issue-url: 'https://github.com/gardener/etcd-steward/issues/1'
+          section-title: 'Dependency Graph'
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          include-legend: true
+          include-finish-node: true
