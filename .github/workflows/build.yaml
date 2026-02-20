@@ -17,7 +17,7 @@ jobs:
     with:
       mode: ${{ inputs.mode }}
     permissions:
-      contents: read
+      id-token: write
 
   oci-images:
     name: Build OCI-Images
@@ -54,7 +54,7 @@ jobs:
       ocm-labels: ${{ toJSON(matrix.args.ocm-labels) }}
       extra-tags: latest
 
-  build-and-test
+  build-and-test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
